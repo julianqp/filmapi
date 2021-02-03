@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('./config/db');
 const app = express();
+require('dotenv').config({ path: '.env' });
 
 mongoose.connection.on(
   'error',
@@ -40,6 +41,6 @@ app.use(function (err, req, res, next) {
   else res.status(500).json({ message: 'Error interno en el servidor!!' });
 });
 
-app.listen(3004, function () {
+app.listen(process.env.PORT, function () {
   console.log('El servidor ha sido inicializado: http://localhost:3004');
 });
