@@ -19,7 +19,7 @@ Disponer de una base de datos mongo en mongo://localhost:27017
 ## Configuracion de las variables
 
 Las variables de configuración del proyecto se añadrirán en el archivo config en la carpeta config.
-En un futuro sería recomendable que las variables privada estuvieran en archivos .env
+Aquellas que sean secretas irán en un .env
 
 ## Mongoose
 
